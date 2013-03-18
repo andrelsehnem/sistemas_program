@@ -18,7 +18,7 @@ public class Sistema {
         sistema:while (x==0){
             System.out.println("1-Gerenciar alunos; 2-Gerenciar turmas; 3-Informalções; 0-Fim;");
             int y = sc.nextInt();
-            prim:if (y == 1){
+            if (y == 1){
                 System.out.println("1-Matricular Aluno; 2-Cancelar matricula; 3-Voltar");
                 y = sc.nextInt();
                 if (y==1){
@@ -29,8 +29,9 @@ public class Sistema {
                 }
             }else if(y==2){
                 System.out.println("1-Nova Turma; 2-Remover turma; 3-Voltar");
+                y = sc.nextInt();                        
             }else if(y==3){
-                System.out.println("1-Aluno; 2-Turma; 3-Voltar");
+                System.out.println("1-Alu;no; 2-Turma; 3-Voltar");
                 y = sc.nextInt();
                 if(y==1){
                     
