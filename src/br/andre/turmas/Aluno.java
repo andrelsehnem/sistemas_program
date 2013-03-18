@@ -1,7 +1,9 @@
 
 package br.andre.turmas;
 
-public class Aluno {
+import java.io.Serializable;
+
+public class Aluno implements Serializable{
     private int ra;
     private String nome;
     private float g1, g2;
