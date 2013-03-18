@@ -20,10 +20,17 @@ public class Sistema {
             int y = sc.nextInt();
             prim:if (y == 1){
                 System.out.println("1-Matricular Aluno; 2-Cancelar matricula; 3-Voltar");
+                y = sc.nextInt();
+                if (y==1){
+                    
+                }
+                if (y==2){
+                    
+                }
             }else if(y==2){
                 System.out.println("1-Nova Turma; 2-Remover turma; 3-Voltar");
             }else if(y==3){
-                System.out.println("1-Aluno; 2-Turma");
+                System.out.println("1-Aluno; 2-Turma; 3-Voltar");
                 y = sc.nextInt();
                 if(y==1){
                     
