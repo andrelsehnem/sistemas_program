@@ -81,4 +81,16 @@ public class Turma {
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
+
+    public ArrayList<Aluno> getAlunos() {
+        return alunos;
+    }
+    
+    public void alunosMatriculados(){
+        System.out.println("Alunos matriculados: ");
+        int x = 0;
+        for (Aluno alu: alunos){
+            System.out.println(alu.getRa() + " - " + alu.getNome());
+        }
+    }
 }

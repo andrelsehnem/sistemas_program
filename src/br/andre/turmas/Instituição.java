@@ -16,4 +16,26 @@ public class Instituição {
         this.descricao = descricao;
                 
     }
+    
+    public int numeroTurmas(){
+        return turmas.size();
+    }
+
+    public ArrayList<Turma> getTurmas() {
+        return turmas;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+    
+    
+    
+    public void turmasCadastradas(){
+        System.out.println("Turms cadastradas: ");
+        int x = 0;
+        for (Turma tur: turmas){
+            System.out.println(tur.getCodigo() + " - " + tur.getDescricao());
+        }
+    }
 }
