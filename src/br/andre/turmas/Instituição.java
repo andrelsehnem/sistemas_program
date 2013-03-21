@@ -29,7 +29,9 @@ public class Instituição {
         return descricao;
     }
     
-    
+    public void removeTurma(Turma turma){
+        turmas.remove(turma);
+    }
     
     public void turmasCadastradas(){
         System.out.println("Turms cadastradas: ");
