@@ -147,7 +147,7 @@ public class Sistema {
                     instituicao.turmasCadastradas();
                     System.out.println("Em qual turma voce deseja procurar o aluno? ( digite o cod) ");
                     cod = sc.nextInt();
-                    for(Turma tur: instituicao.getTurmas()){
+                    busca:for(Turma tur: instituicao.getTurmas()){
                         if (tur.getCodigo() == cod){
                             tur.alunosMatriculados();
                             System.out.println("Qual aluno? ( digite o cod) ");
@@ -158,29 +158,26 @@ public class Sistema {
                                     cod = sc.nextInt();
                                     if (cod == 1){
                                         System.out.println("Media = " + alu.media());
+                                        break busca;
                                     }
                                     else if (cod == 2){
                                         System.out.println("Nota G1 = " + alu.media());
+                                        break busca;
                                     }
                                     else if (cod == 3){
                                         System.out.println("Nota G2 = " + alu.media());
+                                        break busca;
                                     }
                                     else if (cod == 4){
                                         System.out.println("Nome = " + alu.getNome());
                                         System.out.println("RA = " + alu.getRa());
                                         System.out.println("Turma = " + alu.getTurma());
+                                        break busca;
                                     }
                                 }
                             }
                         }
                     }
-                    
-                    /*
-                     * media
-                     * g1
-                     * g2
-                     * info gerai (nome+ra+turma)
-                     */
                 }// fim info aluno
                 else if(y==2){ //info turma
                     /*
