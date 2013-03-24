@@ -180,21 +180,38 @@ public class Sistema {
                     }
                 }// fim info aluno
                 else if(y==2){ //info turma
-                    /*
-                     * quantidade alunos
-                     * quantidade aprovados + %
-                     * quantidade reprovados + %
-                     * media geral
-                     * 
-                     * info gerais (nome + cod)
-                     * 
-                     * alunos matriculados
-                     * 
-                     */
-                }// fim info turma
-                
-            }
-            
+                    instituicao.turmasCadastradas();
+                    sc = new Scanner(System.in);
+                    System.out.println("Qual turma deseja ver as informaações? ( digite o cod) ");
+                    cod = sc.nextInt();
+                    for(Turma tur: instituicao.getTurmas()){
+                        if (tur.getCodigo() == cod){
+                            System.out.println("1-Quantidade de alunos; 2-Quantidade aprovados; 3-Quantidae reprovados; 4-Media geral;");
+                            System.out.println("5-Alunos matriculados; 6-Informações gerais; 0-Voltar ");
+                            cod = sc.nextInt();
+                            if (cod == 1){//quantos alunos
+                                System.out.println(tur.quantidadeAlunos() + "Alunos matriculados");
+                            }
+                            else if (cod == 2){//aprovados
+                                System.out.println(tur.quantidadeAprovados() + " (" + tur.porcentagemAprovados() + "%) aprovados.");
+                            }
+                            else if (cod == 3){//reprovados
+                                System.out.println(tur.quantidadeReprovados() + " (" + tur.porcentagemReprovados() + "%) reprovados.");
+                            }
+                            else if (cod == 4){//media geral
+                                System.out.println("Media geral da turma = " + tur.mediaGeral());
+                            }
+                            else if (cod == 5){ //matriculados
+                                System.out.println("Alunos matriculados: ");
+                                tur.alunosMatriculados();
+                            }
+                            else if (cod == 6){//info gerais
+                                System.out.println("Tumra: " + tur.getDescricao() + "Código" + tur.getCodigo());
+                            }
+                        }
+                    }
+                }// fim info turma                
+            }            
             else if (y==0){//encerrar sistema
                 break sistema;
             }

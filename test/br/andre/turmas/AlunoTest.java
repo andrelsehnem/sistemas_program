@@ -9,7 +9,7 @@ public class AlunoTest {
     
     
     @Test
-    public void calculaMedia(){
+    public void media(){
         assertEquals(7, a1.media(), 0);
     }
 }
